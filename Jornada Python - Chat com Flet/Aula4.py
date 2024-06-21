@@ -31,16 +31,16 @@ def main(pagina):
         pagina.update()
 
     #criacao de elementos
-    titulo = ft.Text("Zap Zap")
+    titulo = ft.Text("Chat de mensagens da galera")
     botao_inciar = ft.ElevatedButton("Inciar Conversa",on_click=iniciar_chat)
 
-    titulo_janela = ft.Text("Bem-vindo cu de fossa")
-    campo_nome_usuario = ft.TextField(label="qual seu nome mané",on_submit=entrar_chat)
+    titulo_janela = ft.Text("Bem-vindo")
+    campo_nome_usuario = ft.TextField(label="Digite o seu nome",on_submit=entrar_chat)
     botao_entar = ft.ElevatedButton("Entrar no chat",on_click=entrar_chat)
     janela = ft.AlertDialog(title=titulo_janela,content=campo_nome_usuario,actions=[botao_entar])
 
     chat = ft.Column()
-    campo_msg = ft.TextField(label="escreva nego ney",on_submit=enviar_msg)
+    campo_msg = ft.TextField(label="Escreva sua mensagem",on_submit=enviar_msg)
     botao_msg = ft.ElevatedButton("Enviar",on_click=enviar_msg)
     linha_msg = ft.Row([campo_msg,botao_msg])
 
